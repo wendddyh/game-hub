@@ -1,11 +1,9 @@
 import './App.css'
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import Homepage from './page/Homepage'
 
 function App() {
   return (
-    <>
-      <Button colorScheme='blue'>Button</Button>
-    </>
+    <Homepage />
   )
 }
 
