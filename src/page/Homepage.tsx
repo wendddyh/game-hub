@@ -1,6 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react"
 import Cards from "../components/Cards"
 import Header from "../components/Header"
+import GenreList from "../components/GenreList"
 
 
 const Homepage = () => {
@@ -20,7 +21,7 @@ const Homepage = () => {
         <Header />
       </GridItem>
       <GridItem pl={1} area={'aside'}>
-        Aside
+        <GenreList />
       </GridItem>
       <GridItem pl={1} area={'main'}>
         <Cards />
