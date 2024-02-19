@@ -2,6 +2,7 @@ import { Card, CardHeader, CardBody, CardFooter, SimpleGrid, Text } from '@chakr
 import useGames from '../hooks/useGames';
 import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
+import GameCardContainer from './GameCardContainer';
 
 const Cards = () => {
   //use hook
@@ -12,9 +13,14 @@ const Cards = () => {
     <>
     {error && <Text>{error}</Text>}
       <SimpleGrid columns={{sm:1, md:2, lg:3, xl:4}} padding={5} spacing={5}>
-        {isLoading && skeletons.map(skeleton => <GameCardSkeleton key={skeleton}></GameCardSkeleton>)}
+
+        {isLoading && skeletons.map(skeleton =>
+          <GameCardContainer>
+            <GameCardSkeleton key={skeleton}></GameCardSkeleton>
+          </GameCardContainer>)}
+
         {games.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCardContainer><GameCard key={game.id} game={game}/></GameCardContainer>
       ))};
 
       </SimpleGrid>
