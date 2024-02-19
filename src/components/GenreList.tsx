@@ -1,13 +1,20 @@
-import React from 'react'
-import useGenre from '../hooks/useGenre'
+
+import useGenre, { Genre } from '../hooks/useGenre'
+import { Box, HStack, Image, Spinner } from '@chakra-ui/react';
+
 
 const GenreList = () => {
-  const {genres} = useGenre();
+  const {data} = useGenre();
 
   return (
-    <ul>
-      {genres.map(genre => <li color='white' key={genre.id}>{genre.name}</li>)}
-    </ul>
+    <Box w={2} h={2}>
+      {data.map(genre =>
+        <HStack key= {genre.id}>
+          <Image src ={genre.image_background}/>
+          {genre.name}
+        </HStack>
+      )};
+    </Box>
 
   )
 }

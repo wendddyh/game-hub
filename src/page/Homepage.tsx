@@ -1,7 +1,7 @@
 import { Grid, GridItem } from "@chakra-ui/react"
-import Cards from "../components/Cards"
 import Header from "../components/Header"
 import GenreList from "../components/GenreList"
+import { Cards } from "../components/Cards"
 
 
 const Homepage = () => {
