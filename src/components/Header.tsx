@@ -1,14 +1,12 @@
 import { Box, HStack, Link} from "@chakra-ui/react"
 import ColorModeSwitch from "./ColorModeSwitch"
-import { SearchIcon } from "@chakra-ui/icons"
+import SearchInput from "./SearchInput"
 
 
 const Header = () => (
-  <HStack justifyContent= 'space-between' padding="10px" >
-    <HStack spacing='20px' h='50px' >
-      <Link color='white' href= "">Home</Link>
-      <Box ><SearchIcon color='white' /></Box>
-    </HStack>
+  <HStack padding="10px" >
+    <Link color='white' href= "">Home</Link>
+    <SearchInput />
     <ColorModeSwitch />
   </HStack>
 )
