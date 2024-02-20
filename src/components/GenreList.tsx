@@ -11,12 +11,14 @@ import {
 } from "@chakra-ui/react";
 import getCroppedImageUrl from "../services/image-url";
 
+
 interface Props {
   onSelectGenre: (genre: Genre) => void;
   selectedGenre: Genre | null;
+
 }
 
-const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
+const GenreList = ({ onSelectGenre, selectedGenre}: Props) => {
   const { data, isLoading, error } = useGenre();
 
   if (isLoading)
