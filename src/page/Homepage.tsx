@@ -27,7 +27,7 @@ const Homepage = () => {
         <Header />
       </GridItem>
       <GridItem pl={1} area={'aside'} paddingX={5}>
-        <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+        <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
       </GridItem>
       <GridItem pl={1} area={'main'}>
         <Cards selectedGenre={selectedGenre}/>
