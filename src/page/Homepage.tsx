@@ -4,6 +4,7 @@ import GenreList from "../components/GenreList"
 import { Cards } from "../components/Cards"
 import { useState } from "react"
 import { Genre } from "../hooks/useGenre"
+import PlatformSelector from "../components/PlatformSelector"
 
 
 const Homepage = () => {
@@ -20,8 +21,7 @@ const Homepage = () => {
       gridTemplateColumns={'150px 1fr'}
       h='200px'
       gap='1'
-      color='blackAlpha.700'
-      fontWeight='medium'  >
+       >
 
       <GridItem pl={1} area={'nav'}>
         <Header />
@@ -30,6 +30,7 @@ const Homepage = () => {
         <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
       </GridItem>
       <GridItem pl={1} area={'main'}>
+        <PlatformSelector />
         <Cards selectedGenre={selectedGenre}/>
       </GridItem>
 
