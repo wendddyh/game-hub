@@ -21,7 +21,7 @@ export const Cards = ({gameQuery}: Props) => {
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         padding={5}
-        spacing={5}
+        spacing={6}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
