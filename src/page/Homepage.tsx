@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, HStack } from "@chakra-ui/react";
+import { Box, Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import Header from "../components/Header";
 import GenreList from "../components/GenreList";
 import { Cards } from "../components/Cards";
@@ -25,24 +25,26 @@ const Homepage = () => {
       templateAreas={{
         base: `"nav main"`,
         lg: `"nav nav"
-                    "aside main"`,
+              "aside main"`
       }}
-      gridTemplateRows={"50px 1fr 30px"}
-      gridTemplateColumns={"150px 1fr"}
-      h="200px"
-      gap="1"
+      gridTemplateRows={'10px 1fr 30px'}
+      gridTemplateColumns={'150px 1fr'}
     >
-      <GridItem pl={1} area={"nav"}>
+      <GridItem area="nav" paddingX={3}>
         <Header onSearch={(searchText)=> setGameQuery({...gameQuery, searchText}) }/>
       </GridItem>
 
-      <GridItem pl={1} area={"aside"} paddingX={5} paddingY={7}>
-        <GenreList
-          selectedGenre={gameQuery.genre}
-          onSelectGenre={(genre) => setGameQuery({...gameQuery, genre })}
-        />
-      </GridItem>
-      <GridItem pl={1} area={"main"}>
+      <Show above='lg'>
+        <GridItem area="aside" paddingX={5} paddingY='115px'>
+          <GenreList
+            selectedGenre={gameQuery.genre}
+            onSelectGenre={(genre) => setGameQuery({...gameQuery, genre })}
+          />
+        </GridItem>
+      </Show>
+
+
+      <GridItem marginY= {2} area="main">
         <Box padding={6}>
           <GameHeading gameQuery={gameQuery}/>
         </Box>

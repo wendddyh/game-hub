@@ -8,7 +8,7 @@ interface Props{
 
 const Header = ({onSearch}: Props) => (
   <HStack padding="10px" >
-    <Link color='white' href= "">Home</Link>
+    <Link href= "">Home</Link>
     <SearchInput onSearch={onSearch} />
     <ColorModeSwitch />
   </HStack>
