@@ -21,7 +21,7 @@ This project is currently deployed on **Vercel**.
 
 ## Demo
 
-Check out the live demo [[here](https://<your-vercel-app>.vercel.app)]
+Check out the live demo [[here](https://gamingrepo.netlify.app/)]
 
 ## Installation
 
